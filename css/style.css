@@ -79,7 +79,7 @@ body {
   margin: 0 auto;
 }
 
-.custom_nav-container .navbar-nav .nav-item .nav-link {
+.custom_nav-container .navbar-nav .nav-item  .nav-link {
   padding: 7px 20px;
   margin: 10px 15px;
   color: #000000;
@@ -90,7 +90,16 @@ body {
   
 
 }
+.nav-item-login{
+ margin: 5px;
+ 
 
+}
+.nav-item-buy{
+  margin: 5px;
+  
+ 
+ }
 .custom_nav-container .navbar-nav .nav-item.active .nav-link, .custom_nav-container .navbar-nav .nav-item:hover .nav-link {
   background-color: rgb(255, 114, 114);
   color: black;
@@ -131,7 +140,8 @@ a:focus {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: end  ;
+         
 }
 
 .navbar-brand img {
@@ -142,7 +152,7 @@ a:focus {
 .navbar-brand span {
   font-size: 22px;
   font-weight: 700;
-  font-family: ;
+  
   color: black;
 }
 
@@ -331,20 +341,46 @@ a:focus {
   -webkit-transition: all .1s;
   transition: all .1s;
 }
-
-.service_section .service_container .box .img-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 125px;
+.box{
+  background-color: #c9baba;
 }
-
+.service_section .service_container .box .img-box  {
+  margin:20px auto;
+  border-radius:5px;
+  border: 1px solid #999;
+  padding:13px;
+  width:300px;
+  height:300px;
+  
+}
+#img1{
+  background:url("../images/agua-micelar.png" );
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+}
+#img2{
+  background:url("../images/protector-solar.png" );
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+}
+#img3{
+  background:url("../images/serum.png" );
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+}
+#img4{
+  background:url("../images/perfume-natura.jpg" );
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+}
+#img5{
+  background:url("../images/perfume-natura1.jpg" );
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+}
+.description-product #boton-micelar{
+  margin-bottom: 0%;
+}
 .service_section .service_container .box .img-box img {
   width: 90px;
 }
@@ -431,51 +467,52 @@ a:focus {
 
 .about_section .detail-box p {
   margin-top: 25px;
+  margin-bottom: 0%;
 }
 
 .about_section .detail-box a {
   display: inline-block;
   padding: 10px 35px;
-  background-color: #4b208c;
+  background-color: rgb(255, 114, 114);
   color: #ffffff;
   border-radius: 5px;
   margin: 25px 0 45px 0;
 }
 
 .about_section .detail-box a:hover {
-  background-color: #5625a1;
+  background-color: pink;
 }
 
-.blog_section .heading_container {
+.products_section .heading_container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.blog_section .heading_container h2::before {
+.products_section .heading_container h2::before {
   background-color: #ffffff;
 }
 
-.blog_section .box {
+.products_section .box {
   margin-top: 55px;
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
 
-.blog_section .box .img-box {
+.products_section .box .img-box {
   position: relative;
 }
 
-.blog_section .box .img-box img {
+.products_section .box .img-box img {
   width: 100%;
 }
 
-.blog_section .box .detail-box {
+.products_section .box .detail-box {
   padding: 25px 25px 15px;
 }
 
-.blog_section .box .detail-box h5 {
+.products_section .box .detail-box h5 {
   font-weight: bold;
 }
 
@@ -643,7 +680,7 @@ a:focus {
   border: none;
   display: inline-block;
   padding: 10px 30px;
-  background-color: #4b208c;
+  background-color: rgb(255, 114, 114);
   color: #ffffff;
   border-radius: 0;
   font-size: 15px;
@@ -651,7 +688,7 @@ a:focus {
 }
 
 .info_section .info_form form button:hover {
-  background-color: #5625a1;
+  background-color: pink;
 }
 
 .info_section .box {
@@ -694,3 +731,54 @@ a:focus {
   color: #222222;
 }
 /*# sourceMappingURL=style.css.map */
+
+/*BOTON VER-COMPRAR*/
+#see-product{
+  border-radius: 20px;
+  padding: 7px 25px;
+  background-color: rgb(255, 114, 114);
+  color: white;
+  border: transparent;
+ 
+}
+#see-product:hover{
+  border-radius: 20px;
+  padding: 7px 28px;
+  background-color: pink;
+  
+}
+
+.description-product{
+  font-size: small;
+ 
+  margin-bottom: 0%;
+}
+
+.marca-product{
+background-color:rgb(255, 114, 114);
+margin-right: 180px;
+border-radius: 20px;
+
+}
+
+/*boton agregar al carrito
+.navbar-buy img{
+    width: 65px;
+}
+.navbar-buy{
+  margin-left: 0%;
+}*/
+#link:active{
+  color: none;
+  
+
+
+}
+#link-service:link {
+  color: #000; 
+  text-decoration: none; 
+}
+#link-service:visited {
+  color: #000; 
+  text-decoration: none; /
+}
