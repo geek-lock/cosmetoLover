@@ -1,0 +1,12 @@
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+    - echo 'deploy de la web'
+  artifacts:
+    untracked: false
+    when: on_success
+    expire_in: 30 days
+  only:
+        - main
