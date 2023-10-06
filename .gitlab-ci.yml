@@ -1,10 +1,9 @@
-# .gitlab-ci.yml
+image: alpine:latest
 
-# Define un trabajo llamado "mi_trabajo"
-cosmetoLover:
-  # Especifica la imagen de Docker que se utilizará para este trabajo
-  image: node:latest
-
-  # Define el script que se ejecutará en el trabajo
+pages:
+  stage: deploy
   script:
-    - echo "Ejecutando mi trabajo en GitLab CI/CD"
+    - echo 'deploy de la web'
+  
+  only:
+        - main
