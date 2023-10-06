@@ -123,16 +123,7 @@ a:focus {
           box-shadow: none;
 }
 
-.custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
-  background-size: 22px;
-  background-repeat: no-repeat;
-  background-position-y: 7px;
-  width: 35px;
-  height: 35px;
-  padding: 0;
-  border: none;
-}
+
 
 .navbar-brand {
   display: -webkit-box;
@@ -274,6 +265,8 @@ a:focus {
 
 .slider_section .img_container .img-box img {
   width: 100%;
+  height: 100%;
+  display: block; 
 }
 
 .slider_section .carousel-control-prev,
@@ -348,11 +341,12 @@ a:focus {
   margin:20px auto;
   border-radius:5px;
   border: 1px solid #999;
-  padding:13px;
   width:300px;
   height:300px;
   
 }
+
+
 #img1{
   background:url("../images/agua-micelar.png" );
   background-size: 100% 100%;
@@ -378,12 +372,16 @@ a:focus {
   background-size: 100% 100%;
   background-repeat:no-repeat;
 }
+.img-box-index img{
+  width: 100%; /* Hace que la imagen ocupe todo el ancho del div */
+  height: 100%; /* Mantiene la proporción de aspecto original de la imagen */
+  display: block; 
+}
+
 .description-product #boton-micelar{
   margin-bottom: 0%;
 }
-.service_section .service_container .box .img-box img {
-  width: 90px;
-}
+
 
 .service_section .service_container .box .detail-box {
   margin-top: 25px;
@@ -415,6 +413,11 @@ a:focus {
   background-color: rgb(255, 114, 114);
   color: white;
   border-radius: 35px;
+}
+.service_section .box .img-box img{
+  width: 100%;
+  height: 100%;
+   
 }
 
 .service_section .btn-box a:hover {
@@ -458,7 +461,11 @@ a:focus {
 }
 
 .about_section .img_container .img-box img {
-  width: 100%;
+
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del div */
+    height: 100%;
+    display: block; 
+  
 }
 
 .about_section .detail-box {
@@ -506,6 +513,8 @@ a:focus {
 
 .products_section .box .img-box img {
   width: 100%;
+  height: 100%;
+  display: block; 
 }
 
 .products_section .box .detail-box {
@@ -781,4 +790,5 @@ border-radius: 20px;
 #link-service:visited {
   color: #000; 
   text-decoration: none; /
+  
 }
