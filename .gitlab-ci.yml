@@ -1,2 +1,10 @@
-# The Docker image that will be used to build your app
-image: CosmetoLover
+# .gitlab-ci.yml
+
+# Define un trabajo llamado "mi_trabajo"
+cosmetoLover:
+  # Especifica la imagen de Docker que se utilizará para este trabajo
+  image: node:latest
+
+  # Define el script que se ejecutará en el trabajo
+  script:
+    - echo "Ejecutando mi trabajo en GitLab CI/CD"
