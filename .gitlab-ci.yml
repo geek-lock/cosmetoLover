@@ -5,8 +5,8 @@ pages:
   script:
     - echo 'deploy de la web'
   artifacts:
-    untracked: false
-    when: on_success
+    paths:
+      - public
     expire_in: 30 days
   only:
         - main
