@@ -101,16 +101,16 @@
           <div id="mensaje" style="display: none;">¡Formulario enviado con éxito!</div>
           <form id="miFormulario" action="https://formspree.io/f/xdorzbqo" method="POST">
             <div>
-              <input type="text" name="Nombre-cliente" placeholder="Nombre" />
+              <input type="text" name="Nombre-cliente" placeholder="Nombre" id="nombre" required />
             </div>
             <div>
-              <input type="email" name="Email-cliente" placeholder="Email" />
+              <input type="email" name="Email-cliente" placeholder="Email" id="emailF" required />
             </div>
             <div>
-              <input type="text" name="Nro-cliente" placeholder="Número de teléfono" />
+              <input type="text" name="Nro-cliente" placeholder="Número de teléfono" id="telefono" required/>
             </div>
             <div>
-              <input type="text" name="mensaje-cliente" class="message-box" placeholder="Mensaje" />
+              <input type="text" name="mensaje-cliente" class="message-box" placeholder="Mensaje" required />
             </div>
             <div class="d-flex ">
               <button type="submit">
@@ -169,9 +169,9 @@
     <div class="row">
       <div class="col-md-8 col-lg-9">
         <div class="info_form">
-          <form action="">
-            <input type="text" placeholder="Ingresa tu Email">
-            <button id="suscripcion">
+          <form id="miFormulario2" action="">
+            <input type="text" id="emailInput" placeholder="Ingresa tu Email">
+            <button type="submit">
               Suscribete
             </button>
           </form>

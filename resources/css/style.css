@@ -66,7 +66,9 @@ body {
           flex-direction: column;
   background-color: #E9DDDE;
 }
-
+.header_section{
+  background-color:  #e4d2c3;
+}
 .sub_page .hero_area {
   height: auto;
 }
@@ -600,7 +602,7 @@ a:focus {
 .info_section {
   background-color:  #dbb8b8;
   color: #ffffff;
-
+  padding: 1px;
 }
 
 .info_section h6 {
