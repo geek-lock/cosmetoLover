@@ -771,7 +771,9 @@ margin-right: 180px;
 border-radius: 20px;
 
 }
-
+#header_product{
+  background-color: #dbb8b8;
+}
 /*boton agregar al carrito
 .navbar-buy img{
     width: 65px;
@@ -793,4 +795,7 @@ border-radius: 20px;
   color: #000; 
   text-decoration: none; /
   
+}
+#filterbar{
+  border-right: #000 solid 1px;
 }
