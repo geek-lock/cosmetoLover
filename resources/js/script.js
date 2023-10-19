@@ -41,3 +41,19 @@ function isValidPhoneNumber(telefono) {
   let numeroTelefono = /^[0-9+]+$/;
   return numeroTelefono.test(telefono);
 }
+
+
+
+//agrego para validar el registro de usuario, la contraseña sea igual a la confirmacion de contraseña
+
+document.getElementById("miRegistro").addEventListener("submit", function(event) {
+  var password = document.getElementById("Password-cliente").value;
+  var confirmarPassword = document.getElementById("Confirmar-Password").value;
+
+  if (password !== confirmarPassword) {
+    // Contraseñas no coinciden, muestra un mensaje de error
+    alert("No coinciden las Contraseñas.");
+    document.getElementById("mensajeError").style.display = "block";
+    event.preventDefault(); // Evita el envío del formulario
+  }
+});

@@ -84,36 +84,82 @@
   </div>
 
 
-  <!-- contact section -->
+  <!-- Register section -->
 
-  <section class="contact_section layout_padding">
+  <section class="Register_section layout_padding">
     <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-md-6 text-center">
+      <div class="row">
+        <div class="col-md-6">
           <div class="heading_container">
-            <h2>
-              Bienvenido
-            </h2>
+            <h2>Registrarse</h2>
           </div>
-          <!-- <div id="mensaje" style="display: none;">¡Acceso exitoso!</div> -->
-          <form id="miLogin" action="#" method="POST">
-            <div>
-              <input type="text" name="Usuario-cliente" placeholder="Usuario" />
+          <br>
+          <p>Registrate para poder comprar nuestros productos y acceder a nuestros servicios.</p>    
+          <br>
+          <form id="miRegistro" action="procesar_registro" method="POST">
+            <div class="form-group">
+              <label for="Nombres">Nombres:</label>
+              <input type="text" id="Nombres" name="Nombres" placeholder="Nombres" required />
             </div>
-            <div>
-              <input type="password" name="Password-cliente" placeholder="Password" />
+            <div class="form-group">
+                <label for="Apellidos">Apellidos:</label>
+                <input type="text" id="Apellidos" name="Apellidos" placeholder="Apellidos" required />
             </div>
-            <div class="d-flex align-items-center justify-content-center">
-              <button type="submit">
-                Iniciar sesión
-              </button>
+            <div class="form-group">
+              <label for="Email-cliente">Correo Electrónico:</label>
+              <input type="email" id="Email-cliente" name="Email-cliente" placeholder="Correo Electrónico" required />
             </div>
+            <div class="form-group">
+              <label for="Fecha-Nacimiento">Fecha de Nacimiento:</label>
+              <input type="date" id="Fecha-Nacimiento" name="Fecha-Nacimiento" placeholder="Fecha de Nacimiento" required />
+            </div>
+            <div class="form-group">
+              <label for="Genero">Género:</label>
+              <select id="Genero" name="Genero" required>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="Direccion">Dirección:</label>
+              <input type="text" id="Direccion" name="Direccion" placeholder="Dirección" required />
+            </div>
+            <div class="form-group">
+              <label for="Codigo-Postal">Código Postal:</label>
+              <input type="text" id="Codigo-Postal" name="Codigo-Postal" placeholder="Código Postal" required />
+            </div>
+            <div class="form-group">
+              <label for="Numero-Telefono">Número de Teléfono:</label>
+              <input type="tel" id="Numero-Telefono" name="Numero-Telefono" placeholder="Número de Teléfono" required />
+            </div>
+            <div class="form-group">
+              <label for="Usuario-cliente">Usuario:</label>
+              <input type="text" id="Usuario-cliente" name="Usuario-cliente" placeholder="Usuario" required />
+            </div>
+            <div class="form-group">
+                <label for="Password-cliente">Contraseña:</label>
+                <input type="password" id="Password-cliente" name="Password-cliente" placeholder="Contraseña" required />
+              </div>
+              <div class="form-group">
+                <label for="Confirmar-Password">Confirmar Contraseña:</label>
+                <input type="password" id="Confirmar-Password" name="Confirmar-Password" placeholder="Confirmar Contraseña" required />
+            </div>
+            <div class="form-group">
+              <button type="submit">Registrarse</button>
+            </div>
+            <p id="mensajeError" style="color: red; display: none;">Las contraseñas no coinciden.</p>
           </form>
-          <a href="./register.html">No tienes cuenta? Registrate</a>
+          <a href="./login.html">¿Ya tienes cuenta? Iniciar sesión</a>
         </div>
       </div>
     </div>
   </section>
+  
+  
+  
+  
+  
 
   <!-- end contact section -->
 
