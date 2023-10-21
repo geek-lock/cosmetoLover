@@ -14,7 +14,7 @@ async function cargarDatos() {
         if (marcaElement && nombreElement && precioElement && descripcionElement) {
           marcaElement.textContent = dato.marca;
           nombreElement.textContent = dato.nombre;
-          precioElement.textContent = `Precio: $${dato.precio}`;
+          precioElement.textContent = `$${dato.precio}`;
           descripcionElement.textContent = dato.descripcion;
         }
       }

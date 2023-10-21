@@ -73,13 +73,47 @@
                 </li>
                 <li class="nav-item-buy">
                   <a class="navbar-brand" href="#">
-                    <img src="../images/buyicon.ico" alt=""> </a>
-                </li>
+                      <img src="../images/buyicon.ico" alt="">
+                      <div class="count-products" id="count-products">
+                          <span id="contador-productos">0</span>
+                      </div>
+                    </a>
+                        <div class="container-cart-products hidden-cart">
+                          <div class="row-product hidden">
+                            <div class="cart-product">
+                                <div class="info-cart-product">
+                                  <span class="cantidad-producto-carrito">0</span>
+                                  <p class="titulo-producto-carrito">Productos</p>
+                                  <span class="precio-producto-carrito">$0</span>
+                                </div>
+                                <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="icon-close">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                              </div>
+                          </div>
+                          <div class="cart-total hidden">
+                            <h3>Total:</h3>
+                            <span class="total-pagar">$0</span>
+                          </div>
+                            <p class="cart-empty">El carrito está vacío</p>
+                        </div>
+              </li>
+              
               </ul>
             </div>
           </div>
         </nav>
       </div>
+       
     </header>
     <!-- end header section -->
   </div>
@@ -96,16 +130,15 @@
       <div class="service_container">
         <div class="box">
           <div class="marca-product" id="marca-item1"></div>
-          <div class="img-box" id="img1"></div>
-          <div class="detail-box" >
-            <h5 id="nombre-item1"></h5>
-            <p id="precio-item1">
-             <div class="description-product" id="descripcion-item1"></div>
-            </p>
-          </div>
-          <form action="" id="boton-micelar">
-            <a><button id="see-product">Agregar al carrito</button></a>
-          </form>
+            <div class="img-box" id="img1"></div>
+              <div class="detail-box" >
+                <h5 id="nombre-item1"></h5>
+                <p id="precio-item1"></p>
+                <div class="description-product" id="descripcion-item1"></div>
+                <br>
+                <button  class="seeProduct" id="see-product">Agregar al carrito</button>
+              </div>
+          
         </div>
 
         <div class="box">
@@ -113,17 +146,11 @@
           <div class="img-box" id="img2"></div>
           <div class="detail-box" >
             <h5 id="nombre-item2"></h5>
-            <p id="precio-item2">
+            <p id="precio-item2"> </p>
              <div class="description-product" id="descripcion-item2"></div>
-            </p>
+             <br>
+             <button  class="seeProduct" id="see-product2">Agregar al carrito</button>
           </div>
-          <form action="" >
-            
-              <a >
-               <button id="agregar-carrito">Agregar al carrito</button></a>
-                
-           
-          </form>
           
         </div>
         <div class="box">
@@ -136,11 +163,7 @@
             </p>
           </div>
           <form action="" >
-            
-              <a >
-               <button id="see-product">Agregar al carrito</button></a>
-                
-           
+              <a><button  class="seeProduct" id="see-product3">Agregar al carrito</button></a>
           </form>
           
         </div>
@@ -156,7 +179,7 @@
           <form action="" >
             
               <a >
-               <button id="see-product">Agregar al carrito</button></a>
+               <button  class="seeProduct" id="see-product4">Agregar al carrito</button></a>
                 
            
           </form>
@@ -174,7 +197,7 @@
           <form action=""  >
             
               <a >
-               <button id="see-product">Agregar al carrito</button></a>
+               <button class="seeProduct" id="see-product5">Agregar al carrito</button></a>
                 
            
           </form>
@@ -288,7 +311,6 @@
 <script src="../js/script.js"></script>
 <script src="../js/datos.js"></script>
 <script src="../js/app.js"></script>
-
 </body>
 
 </html>
