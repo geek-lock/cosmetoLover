@@ -39,6 +39,7 @@ function isValidEmail(email) {
 function isValidPhoneNumber(telefono) {
   let numeroTelefono = /^[0-9+]+$/;
   return numeroTelefono.test(telefono);
+<<<<<<< HEAD
 };
 
 //productos-carrito
@@ -57,3 +58,21 @@ function agregarProducto(nombre, descripcion, precio) {
   carrito.push({ nombre, descripcion, precio });
   actualizarCarrito();
 }
+=======
+}
+
+
+
+//agrego para validar el registro de usuario, la contraseña sea igual a la confirmacion de contraseña
+
+document.getElementById("miRegistro").addEventListener("submit", function(event) {
+  var password = document.getElementById("Password-cliente").value;
+  var confirmarPassword = document.getElementById("Confirmar-Password").value;
+
+  if (password !== confirmarPassword) {
+    // Contraseñas no coinciden, muestra un mensaje de error
+    document.getElementById("mensajeError").style.display = "block";
+    event.preventDefault(); // Evita el envío del formulario
+  }
+});
+>>>>>>> 56b313d24825d0b56e63857a6401c5403ecc8fa0
