@@ -52,7 +52,6 @@ document.getElementById("miRegistro").addEventListener("submit", function(event)
 
   if (password !== confirmarPassword) {
     // Contraseñas no coinciden, muestra un mensaje de error
-    alert("No coinciden las Contraseñas.");
     document.getElementById("mensajeError").style.display = "block";
     event.preventDefault(); // Evita el envío del formulario
   }
