@@ -34,10 +34,26 @@ document.getElementById("miFormulario").addEventListener("submit", function (eve
 function isValidEmail(email) {
   let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   return emailPattern.test(email);
-}
+};
 
 function isValidPhoneNumber(telefono) {
-  // Expresión regular que acepta números y el símbolo "+"
   let numeroTelefono = /^[0-9+]+$/;
   return numeroTelefono.test(telefono);
+};
+
+//productos-carrito
+document.getElementById("see-product").addEventListener("click", function (event) {
+  event.preventDefault();
+
+  // Obtener los datos del producto
+  const nombre = document.getElementById("nombre-item1").textContent;
+  const descripcion = document.getElementById("descripcion-item1").textContent;
+  const precio = parseFloat(document.getElementById("precio-item1").textContent);
+
+  // Llamar a la función agregarProducto
+  agregarProducto(nombre, descripcion, precio);
+});
+function agregarProducto(nombre, descripcion, precio) {
+  carrito.push({ nombre, descripcion, precio });
+  actualizarCarrito();
 }
