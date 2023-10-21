@@ -39,7 +39,6 @@ function isValidEmail(email) {
 function isValidPhoneNumber(telefono) {
   let numeroTelefono = /^[0-9+]+$/;
   return numeroTelefono.test(telefono);
-<<<<<<< HEAD
 };
 
 //productos-carrito
@@ -58,8 +57,8 @@ function agregarProducto(nombre, descripcion, precio) {
   carrito.push({ nombre, descripcion, precio });
   actualizarCarrito();
 }
-=======
-}
+
+
 
 
 
@@ -75,4 +74,4 @@ document.getElementById("miRegistro").addEventListener("submit", function(event)
     event.preventDefault(); // Evita el envío del formulario
   }
 });
->>>>>>> 56b313d24825d0b56e63857a6401c5403ecc8fa0
+
