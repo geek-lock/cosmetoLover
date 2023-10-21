@@ -1,34 +1,32 @@
-{
-    "productos":[
-        {
-            "nombre": "Agua Micelar",
-            "descripcion": "El agua micelar bifásica desmaquilla, limpia y nutre en un solo paso rostro, ojos y labios.",
-            "precio":5.000 
-        },
-        {
-            "nombre": "Protector Solar",
-            "descripcion": "Protector solar Dermaglós FPS 20 en emulsión de 250 mL.",
-            "precio": 4.780
-        },
-        {
-            "nombre": "Serum",
-            "descripcion": "Acf By Dadatina Serum Reparador Vol2 Regenerador Refill 30ml Tipo De Piel Todo Tipo De Piel",
-            "precio": 6.230
-        },
-        {
-            "nombre": "Perfume Femenino",
-            "descripcion": "Kaiak Vital femenino te transporta a un encuentro energizante con el mar.",
-            "precio": 8.050
-        },
-        {
-            "nombre": "Perfume Masculino",
-            "descripcion": "Perfume Masculino Natura Humor A Dois 75ml, Mix provocante de notas amaderadas, bergamota y pimienta.",
-            "precio": 8.050
-        },
-        {
-            "nombre": "nuevo",
-            "descripcion": "nuevooos",
-            "precio": 9.512
-        }
-    ]
-}
+[
+    {
+    "marca": "GARNIER",
+    "nombre": "Agua Micelar",
+    "descripcion": "El agua micelar bifásica desmaquilla, limpia y nutre en un solo paso rostro, ojos y labios.",
+    "precio": 5000
+    },
+    {
+    "marca": "DERMAGLOS",
+    "nombre": "Protector Solar",
+    "descripcion": "Protector solar Dermaglós FPS 20 en emulsión de 250 mL.",
+    "precio": 4780
+    },
+    {
+    "marca": "By Dadatina",
+    "nombre": " Serum",
+    "descripcion": "Serum Reparador Vol2 Regenerador Refill 30ml Tipo De Piel Todo Tipo De Piel.",
+    "precio": 6320
+    },
+    {
+    "marca": "NATURA",
+    "nombre": "Perfume Femenino",
+    "descripcion": "Kaiak Vital femenino te transporta a un encuentro energizante con el mar.",
+    "precio": 8050
+    },
+    {
+    "marca": "NATURA",
+    "nombre": "Perfume Masculino",
+    "descripcion": "Mix provocante de notas amaderadas, bergamota y pimienta.",
+    "precio": 8050
+    }
+]
