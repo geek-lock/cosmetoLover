@@ -504,6 +504,7 @@ a:focus {
     border: none;
     @include hero_btn($primary1, $white, 12px, 45px, 0px);
     margin-top: 35px;
+    
   }
 
   .map_container {
@@ -632,7 +633,6 @@ a:focus {
 .register_section {
   position: relative;
 
-
   form {
     margin-top: 45px;
     padding-right: 35px;
@@ -695,8 +695,6 @@ a:focus {
     &.message-box {
       height: 120px;
     }
-
-
   }
 }
 

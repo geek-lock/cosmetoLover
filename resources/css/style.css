@@ -255,7 +255,10 @@ a:focus {
 }
 
 .slider_section .detail_box a:hover {
-  background-color: #E9DDDE;
+  background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
+  color: black;/* Cambia el color del texto en el estado de hover */
+  transform: scale(1.25); /* Escala el botón al 110% en el estado de hover */
+  font-size: 20px; /* Aumenta el tamaño de fuente en el estado de hover */
 }
 
 .slider_section .img_container {
@@ -427,7 +430,10 @@ a:focus {
 }
 
 .service_section .btn-box a:hover {
-  background-color: #E9DDDE;
+  background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
+  color: black;/* Cambia el color del texto en el estado de hover */
+  transform: scale(1.25); /* Escala el botón al 125% en el estado de hover */
+  font-size: 20px; /* Aumenta el tamaño de fuente en el estado de hover */
 }
 
 .about_section {
@@ -579,12 +585,15 @@ a:focus {
   padding: 12px 45px;
   background-color: rgb(255, 114, 114);
   color: #ffffff;
-  border-radius: 0px;
+  border-radius: 25px;
   margin-top: 35px;
 }
 
 .contact_section button:hover {
-  background-color: pink;
+  background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
+  color: black;/* Cambia el color del texto en el estado de hover */
+  transform: scale(1.25); /* Escala el botón al 110% en el estado de hover */
+  font-size: 20px; /* Aumenta el tamaño de fuente en el estado de hover */
 }
 
 .contact_section .map_container {
@@ -703,7 +712,10 @@ a:focus {
 }
 
 .info_section .info_form form button:hover {
-  background-color: pink;
+  background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
+  color: black;/* Cambia el color del texto en el estado de hover */
+  transform: scale(1.1); /* Escala el botón al 110% en el estado de hover */
+  font-size: 20px; /* Aumenta el tamaño de fuente en el estado de hover */
 }
 
 .info_section .box {
@@ -958,12 +970,15 @@ border-radius: 20px;
   padding: 12px 45px;
   background-color: rgb(255, 114, 114);
   color: #ffffff;
-  border-radius: 10px;
+  border-radius: 25px;
   margin-top: 35px;
 }
 
 .register_section button:hover {
-  background-color: pink;
+  background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
+  color: black;/* Cambia el color del texto en el estado de hover */
+  transform: scale(1.25); /* Escala el botón al 110% en el estado de hover */
+  font-size: 20px; /* Aumenta el tamaño de fuente en el estado de hover */
 }
 
 .register_section .map_container {
