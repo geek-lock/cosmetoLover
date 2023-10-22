@@ -201,7 +201,12 @@ a:focus {
   -webkit-transform: none;
           transform: none;
 }
-
+.formulario{
+  background-color: white;
+}
+body{
+  background-color: #e4d2c3;
+}
 /*end header section*/
 /* slider section */
 .slider_section {
@@ -218,6 +223,7 @@ a:focus {
   z-index: 2;
   color: #b47272;
   padding-bottom: 90px;
+  background-color: #e4d2c3;
 }
 
 .slider_section .row {
@@ -421,10 +427,6 @@ a:focus {
 }
 
 .service_section .btn-box a:hover {
-  background-color: #E9DDDE;
-}
-
-.about_section {
   background-color: #E9DDDE;
 }
 
