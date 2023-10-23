@@ -13,15 +13,6 @@ const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
 
 
-function showCountProduct(){
-
-	if(carrito==0){
-		
-		document.getElementById('count-products').style.display = 'none';
-	}else{
-		document.getElementById('count-products').style.display = 'flex';
-	}
-}
 
 productsList.addEventListener('click', e => {
     
@@ -31,8 +22,11 @@ productsList.addEventListener('click', e => {
 			quantity: 1,
 			title: product.querySelector('h5').textContent,
 			price: product.querySelector('p').textContent,
-		};
 
+		
+
+		};
+		
 		const exits = carrito.some(
 			product => product.title === infoProduct.title
 		);
@@ -46,11 +40,14 @@ productsList.addEventListener('click', e => {
 				}
 			});
 			carrito = [...products];
+			
 		} else {
 			carrito = [...carrito, infoProduct];
 		}
 		showCountProduct();
 		showHTML();
+		actualizarVisibilidadContador();
+		
 	}
 });
 rowProduct.addEventListener('click', e => {
@@ -60,7 +57,6 @@ rowProduct.addEventListener('click', e => {
 		containerCartProducts.classList.toggle('hidden-cart');
 		carrito = carrito.filter(product => product.title !== title);
 		showHTML();
-		showCountProduct();
 	}
 });
 // Funcion para mostrar  HTML
