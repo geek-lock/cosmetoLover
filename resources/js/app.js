@@ -1,13 +1,10 @@
 const btnCart = document.querySelector('.nav-item-buy');
 const containerCartProducts = document.querySelector('.container-cart-products');
-
-btnCart.addEventListener('click', () => {
-	containerCartProducts.classList.toggle('hidden-cart');
-});
-
+const btnProduct = document.querySelector('.seeProduct');
+btnCart.addEventListener('click', () => {containerCartProducts.classList.toggle('hidden-cart');});
+btnProduct.addEventListener('click', () => {btnProduct.style.backgroundColor = 'gray';});
 const cartInfo = document.querySelector('.cart-product');
 const rowProduct = document.querySelector('.row-product');
-
 const productsList = document.querySelector('.service_container');
 let carrito = [];
 const valorTotal = document.querySelector('.total-pagar');
@@ -16,6 +13,15 @@ const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
 
 
+function showCountProduct(){
+
+	if(carrito==0){
+		
+		document.getElementById('count-products').style.display = 'none';
+	}else{
+		document.getElementById('count-products').style.display = 'flex';
+	}
+}
 
 productsList.addEventListener('click', e => {
     
@@ -43,7 +49,7 @@ productsList.addEventListener('click', e => {
 		} else {
 			carrito = [...carrito, infoProduct];
 		}
-
+		showCountProduct();
 		showHTML();
 	}
 });
@@ -51,10 +57,10 @@ rowProduct.addEventListener('click', e => {
 	if (e.target.classList.contains('icon-close')) {
 		const product = e.target.parentElement;
 		const title = product.querySelector('p').textContent;
-		carrito = carrito.filter(
-			product => product.title !== title
-		);
+		containerCartProducts.classList.toggle('hidden-cart');
+		carrito = carrito.filter(product => product.title !== title);
 		showHTML();
+		showCountProduct();
 	}
 });
 // Funcion para mostrar  HTML
@@ -100,7 +106,7 @@ const showHTML = () => {
                 />
             </svg>
         `;
-
+		
 		rowProduct.append(containerProduct);
         
 		total = total + parseInt(product.quantity * product.price.slice(1));
@@ -109,4 +115,8 @@ const showHTML = () => {
 
 	valorTotal.innerText = `$${total}`;
 	countProducts.innerText = totalOfProducts;
+	showCountProduct()
 };
+
+
+
