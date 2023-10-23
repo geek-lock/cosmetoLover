@@ -14,8 +14,18 @@ const valorTotal = document.querySelector('.total-pagar');
 const countProducts = document.querySelector('#contador-productos');
 const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
+const divCount = document.querySelector('.count-products');
 
-
+function actualizarVisibilidadContador() {
+	console.log(carrito);
+	if (carrito.length === 0) {
+	  divCount.style.display = 'none';
+	  console.log('aca estoy en none', carrito);
+	}else { 
+	  divCount.style.display = 'block';
+	  console.log('aca estoy en block',carrito);
+	}
+  }
 
 productsList.addEventListener('click', e => {
     
@@ -25,8 +35,11 @@ productsList.addEventListener('click', e => {
 			quantity: 1,
 			title: product.querySelector('h5').textContent,
 			price: product.querySelector('p').textContent,
-		};
 
+		
+
+		};
+		
 		const exits = carrito.some(
 			product => product.title === infoProduct.title
 		);
@@ -40,11 +53,14 @@ productsList.addEventListener('click', e => {
 				}
 			});
 			carrito = [...products];
+			
 		} else {
 			carrito = [...carrito, infoProduct];
 		}
 
 		showHTML();
+		actualizarVisibilidadContador();
+		
 	}
 });
 rowProduct.addEventListener('click', e => {
@@ -55,6 +71,8 @@ rowProduct.addEventListener('click', e => {
 			product => product.title !== title
 		);
 		showHTML();
+		actualizarVisibilidadContador();
+
 	}
 });
 // Funcion para mostrar  HTML
