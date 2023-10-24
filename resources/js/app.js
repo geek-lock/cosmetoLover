@@ -1,22 +1,70 @@
 const btnCart = document.querySelector('.nav-item-buy');
 const containerCartProducts = document.querySelector('.container-cart-products');
-
-btnCart.addEventListener('click', () => {
-	containerCartProducts.classList.toggle('hidden-cart');
-});
-
+const btnProduct = document.querySelectorAll('.seeProduct');
 const cartInfo = document.querySelector('.cart-product');
 const rowProduct = document.querySelector('.row-product');
-
 const productsList = document.querySelector('.service_container');
 let carrito = [];
 const valorTotal = document.querySelector('.total-pagar');
 const countProducts = document.querySelector('#contador-productos');
 const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
+const originalButtonColors = {};
 
+document.addEventListener('click', (e) => {
+	const targetElement = e.target;
+  
+	if (!containerCartProducts.contains(targetElement) && targetElement !== btnCart) {
+	  containerCartProducts.classList.add('hidden-cart');
+	}
+});
+btnCart.addEventListener('click', (e) => {
+	e.stopPropagation();
+	containerCartProducts.classList.toggle('hidden-cart');
+});
+btnProduct.forEach(btn => {
+	btn.addEventListener('click', () => {
+	originalButtonColors[btn.id] = window.getComputedStyle(btn).backgroundColor;
 
+	btn.style.backgroundColor = 'gray';
+	Toastify({
+		text: "Agregado al carrito!",
+		style: {
+			background: "linear-gradient(to right, #FF7272, #FF7272)",
+		},		
+		duration: 1200		
+		}).showToast();
+	});
+});
+function updateButtonColors() {
+	btnProduct.forEach(btn => {
+	  const productTitle = btn.parentElement.querySelector('h5').textContent;
+	  if (carrito.some(product => product.title === productTitle)) {
+		btn.style.backgroundColor = 'gray';
+	  } else {
+		btn.style.backgroundColor = originalButtonColors[btn.id];
+	  }
+	});
+}
+function showCountProduct(){
 
+	if(carrito==0){
+		
+		document.getElementById('count-products').style.display = 'none';
+	}else{
+		document.getElementById('count-products').style.display = 'flex';
+	}
+}
+function removeFromCart(title) {
+	carrito = carrito.filter(product => product.title !== title);
+	showHTML();
+	showCountProduct();
+  
+	// Restaurar los colores originales de los botones
+	btnProduct.forEach(btn => {
+	  btn.style.backgroundColor = originalButtonColors[btn.id];
+	});
+}
 productsList.addEventListener('click', e => {
     
 	if (e.target.classList.contains('seeProduct')) {
@@ -26,7 +74,7 @@ productsList.addEventListener('click', e => {
 			title: product.querySelector('h5').textContent,
 			price: product.querySelector('p').textContent,
 		};
-
+		
 		const exits = carrito.some(
 			product => product.title === infoProduct.title
 		);
@@ -40,22 +88,35 @@ productsList.addEventListener('click', e => {
 				}
 			});
 			carrito = [...products];
+			
 		} else {
 			carrito = [...carrito, infoProduct];
 		}
-
+		showCountProduct();
 		showHTML();
-	}
+		updateButtonColors();
+		}
 });
 rowProduct.addEventListener('click', e => {
 	if (e.target.classList.contains('icon-close')) {
 		const product = e.target.parentElement;
 		const title = product.querySelector('p').textContent;
-		carrito = carrito.filter(
-			product => product.title !== title
-		);
+		containerCartProducts.classList.toggle('hidden-cart');
+		carrito = carrito.filter(product => product.title !== title);
 		showHTML();
-	}
+		showCountProduct();
+		updateButtonColors();
+		Toastify({
+			text: "Item eliminado!",
+			style: {
+				background: "linear-gradient(to right, #FF7272, #FF7272)",
+			  },		
+			duration: 1000		
+			}).showToast();
+		
+			
+}
+
 });
 // Funcion para mostrar  HTML
 const showHTML = () => {
@@ -63,10 +124,12 @@ const showHTML = () => {
 		cartEmpty.classList.remove('hidden');
 		rowProduct.classList.add('hidden');
 		cartTotal.classList.add('hidden');
+		
 	} else {
 		cartEmpty.classList.add('hidden');
 		rowProduct.classList.remove('hidden');
 		cartTotal.classList.remove('hidden');
+		
 	}
 
 	// Limpiar HTML
@@ -100,7 +163,7 @@ const showHTML = () => {
                 />
             </svg>
         `;
-
+		
 		rowProduct.append(containerProduct);
         
 		total = total + parseInt(product.quantity * product.price.slice(1));
@@ -109,4 +172,10 @@ const showHTML = () => {
 
 	valorTotal.innerText = `$${total}`;
 	countProducts.innerText = totalOfProducts;
+	showCountProduct();
+	updateButtonColors();
+	
 };
+
+
+
