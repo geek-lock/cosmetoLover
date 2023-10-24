@@ -1,4 +1,6 @@
-
+body{
+  background-color: #e4d2c3;
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
