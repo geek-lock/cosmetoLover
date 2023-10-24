@@ -36,11 +36,8 @@
     <header class="header_section">
       <div class="container" id="header-box">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="../../index.html">
-            <img src="../images/logoCos.png" alt="">
-            <span>
-              CosmetoLover
-            </span>
+          <a  href="../../index.html">
+            <img src="../images/logo2.jpg" width="100%" alt="">            
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="s-1"> </span>
@@ -92,60 +89,78 @@
         <div class="col-md-6">
           <div class="heading_container">
             <h2>Registrarse</h2>
-            <img src="../images/logoCos.png" alt="">
+            <img src="" alt="">
           </div>
           <br>
           <p>Registrate para poder comprar nuestros productos y acceder a nuestros servicios.</p>    
           <br>
           <form id="miRegistro" action="procesar_registro" method="POST">
             <div class="form-group">
+              
               <label for="Nombres">Nombres:</label>
+              <div class="formulario">
               <input type="text" id="Nombres" name="Nombres" placeholder="Nombres" required />
+              </div>
             </div>
-            <div class="form-group">
+            <div class="form-group ">
                 <label for="Apellidos">Apellidos:</label>
+                <div class="formulario">
                 <input type="text" id="Apellidos" name="Apellidos" placeholder="Apellidos" required />
+              </div>
             </div>
             <div class="form-group">
               <label for="Email-cliente">Correo Electrónico:</label>
+              <div class="formulario">
               <input type="email" id="Email-cliente" name="Email-cliente" placeholder="Correo Electrónico" required />
+              </div>
             </div>
             <div class="form-group">
               <label for="Fecha-Nacimiento">Fecha de Nacimiento:</label>
-              <input type="date" id="Fecha-Nacimiento" name="Fecha-Nacimiento" placeholder="Fecha de Nacimiento" required />
+              <div class="formulario"><input type="date" id="Fecha-Nacimiento" name="Fecha-Nacimiento" placeholder="Fecha de Nacimiento" required />
+              </div>
             </div>
             <div class="form-group">
               <label for="Genero">Género:</label>
+              <div class="formulario">
               <select id="Genero" name="Genero" required class="custom-select">
                 <option value="masculino" >Masculino</option>
                 <option value="femenino" >Femenino</option>
                 <option value="otro" >Otro</option>
               </select>
             </div>
+          </div>
             <div class="form-group">
               <label for="Direccion">Dirección:</label>
-              <input type="text" id="Direccion" name="Direccion" placeholder="Dirección" required />
+              <div class="formulario">
+              <input type="text" id="Direccion" name="Direccion" placeholder="Dirección" required /></div>
             </div>
             <div class="form-group">
               <label for="Codigo-Postal">Código Postal:</label>
-              <input type="text" id="Codigo-Postal" name="Codigo-Postal" placeholder="Código Postal" required />
+              <div class="formulario">
+              <input type="text" id="Codigo-Postal" name="Codigo-Postal" placeholder="Código Postal" required /></div>
             </div>
             <div class="form-group">
               <label for="Numero-Telefono">Número de Teléfono:</label>
-              <input type="tel" id="Numero-Telefono" name="Numero-Telefono" placeholder="Número de Teléfono" required />
+              <div class="formulario">
+              <input type="tel" id="Numero-Telefono" name="Numero-Telefono" placeholder="Número de Teléfono" required /></div>
             </div>
             <div class="form-group">
               <label for="Usuario-cliente">Usuario:</label>
+              <div class="formulario">
               <input type="text" id="Usuario-cliente" name="Usuario-cliente" placeholder="Usuario" required />
+            </div>
             </div>
             <div class="form-group">
                 <label for="Password-cliente">Contraseña:</label>
-                <input type="password" id="Password-cliente" name="Password-cliente" placeholder="Contraseña" required />
+                <div class="formulario">
+                <input type="password" id="Password-cliente" name="Password-cliente" placeholder="Contraseña" required /></div>
               </div>
               <div class="form-group">
                 <label for="Confirmar-Password">Confirmar Contraseña:</label>
+                <div class="formulario">
                 <input type="password" id="Confirmar-Password" name="Confirmar-Password" placeholder="Confirmar Contraseña" required />
             </div>
+          </div>
             <div class="form-group">
               <button type="submit">Registrarse</button>
             </div>
