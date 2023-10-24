@@ -780,9 +780,8 @@ a:focus {
 }
 .seeProduct:hover{
   border-radius: 20px;
-  padding: 7px 28px;
-  background-color: pink;
-  
+  padding: 10px 35px;  
+  font-style: italic;
 }
 .carrito-container {
   position: absolute;

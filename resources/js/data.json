@@ -30,9 +30,9 @@
     "precio": 8050
     },
     {
-        "marca": "NATURA",
-        "nombre": "Perfume Masculino",
-        "descripcion": "Mix provocante de notas amaderadas, bergamota y pimienta.",
-        "precio": 8050
-        }
+    "marca": "NATURA",
+    "nombre": "Perfume Mix",
+    "descripcion": "Mix provocante de notas amaderadas, bergamota y pimienta.",
+    "precio": 8000
+    }
 ]
