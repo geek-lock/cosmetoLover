@@ -64,11 +64,11 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #E9DDDE;
+  background-color: #e4d2c3;
   box-shadow: 0px 0px 2px rgba(0,0,0,.6);
 }
 .header_section{
-  background-color:  #e4d2c3;
+  background-color:  #E9DDDE;
 }
 
 .sub_page .hero_area {
@@ -444,7 +444,7 @@ a:focus {
 }
 
 .about_section {
-  background-color: #E9DDDE;
+  background-color: #e4d2c3;
   box-shadow: 0px 0px 2px rgba(0,0,0,.6);
 }
 
@@ -547,7 +547,7 @@ a:focus {
 
 .contact_section {
   position: relative;
-  background-color: #E9DDDE;
+  background-color: #e4d2c3;
   box-shadow: 0px 0px 2px rgba(0,0,0,.6);
 }
 
@@ -925,13 +925,23 @@ border-radius: 20px;
 #filterbar{
   border-right: #000 solid 1px;
 }
+#consulta-sesion{
+  padding-left: 0%;
+}
 
 
+.formulario {
+    background-color: white;
+}
+.contact_section form {
+  margin-top: 45px;
+  padding-right: 35px;
+}
 /*parte de register seccion*/
 
 .register_section {
   position: relative;
-  background-color: #E9DDDE;
+  background-color: #e4d2c3;
   padding-right: 35px;
   box-shadow: 0px 0px 2px rgba(0,0,0,.6);
 }
