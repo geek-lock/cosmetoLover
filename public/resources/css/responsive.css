@@ -41,7 +41,10 @@
 }
 
 @media (max-width: 768px) {
-
+.logo{
+  width: 70%;
+  margin-left: 10%;
+}
 
   .slider_section .detail_box {
     text-align: center;
