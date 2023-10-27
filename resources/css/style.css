@@ -170,7 +170,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-toggler {
-  padding: 0;
+  padding: 0 0 0 90%;
   width: 37px;
   height: 42px;
 }
@@ -815,11 +815,11 @@ body{
 
   background-color: rgb(255, 114, 114);
   color: #fff;
-  width: 19px;
-  height: 19px;
+  width: 70px;
+  height: 20px;
 
   display: flex;
-  justify-content: center;
+  justify-content: center ;
   align-items: center;
   border-radius: 50%;
 }
@@ -1051,4 +1051,17 @@ border-radius: 20px;
 
 .popup.active {
   display: block;
+}
+#btn-filtro{
+  background-color:  rgb(255, 114, 114); 
+  border-radius: 15px;
+}
+#btn-filtro:hover{
+  background-color:  rgb(230, 133, 133);
+  font-style: italic;
+  border-radius: 15px;
+}
+#icon-login{
+  margin-left: 47%;
+
 }
