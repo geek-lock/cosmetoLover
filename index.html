@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -27,6 +26,8 @@
   <link href="./resources/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="./resources/css/responsive.css" rel="stylesheet" />
+  <!-- Toastify -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
@@ -68,9 +69,42 @@
                     <img src="./resources/images/login1.ico" alt=""> </a>
                 </li>
                 <li class="nav-item-buy">
-                  <a class="navbar-brand" href="">
-                    <img src="./resources/images/buyicon.ico" alt=""> </a>
-                </li>
+                  <a class="navbar-brand" href="#">
+                      <img src="./resources/images/buyicon.ico" alt="">
+                      <div class="count-products" id="count-products" style="display: none;">
+                          <span id="contador-productos">0</span>
+                      </div>
+                    </a>
+                        <div class="container-cart-products hidden-cart">
+                          <div class="row-product hidden">
+                            <div class="cart-product">
+                                <div class="info-cart-product">
+                                  <span class="cantidad-producto-carrito">0</span>
+                                  <p class="titulo-producto-carrito">Productos</p>
+                                  <span class="precio-producto-carrito">$0</span>
+                                </div>
+                                <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="icon-close">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                              </div>
+                          </div>
+                          <div class="cart-total hidden">
+                            <h3>Total:</h3>
+                            <span class="total-pagar">$0</span>
+                            <a href="./resources/pages/payPage.html">Ir a pagar</a>
+                          </div>
+                            <p class="cart-empty">El carrito está vacío</p>
+                        </div>
+              </li>
               </ul>
             </div>
           </div>
@@ -102,7 +136,7 @@
               </p>
               
               <a href="./resources/pages/contact.html" class="">
-                Contáctanos
+                Contáctanos</a>
             </div>
           </div>
           <div class="col-lg-5 col-md-6 offset-lg-1">
@@ -167,7 +201,7 @@
               Diversos servicios de higiene facial, maquillaje y mucho más!
             </h5>
             <p>
-              <a href="./resources/pages/service.html" id="link-service"> Obtén una atención personalizada haciendo click acá.</a>
+              <a href="./resources/pages/service.html" id="link-service"> Obtené una atención personalizada haciendo click acá.</a>
             </p>
           </div>
         </div>
@@ -235,9 +269,9 @@
       <div class="row">
         <div class="col-md-8 col-lg-9">
           <div class="info_form">
-            <form action="">
-              <input type="text" placeholder="Ingresa tu Email">
-              <button id="suscripcion">
+            <form id="miFormulario2" action="">
+              <input type="text" id="emailInput" placeholder="Ingresa tu Email">
+              <button type="submit">
                 Suscribete
               </button>
             </form>
@@ -281,7 +315,7 @@
         <div class="col-lg-7 col-md-9 mx-auto">
           <p>
             &copy; 2023 All Rights Reserved By
-            <a href="https://www.linkedin.com/in/jcgwg/">Juan Weffer</a>
+            <a href="https://linktr.ee/CosmetoLover">Grupo 3 - Codo a Codo</a>
           </p>
         </div>
       </div>
@@ -293,7 +327,9 @@
   <script src="./resources/js/jquery-3.4.1.min.js"></script>
   <script src="./resources/js/bootstrap.js"></script>
   <script src="./resources/js/script.js"></script>
-
+  <script src="./resources/js/datos.js"></script>
+  <script src="./resources/js/app.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
