@@ -2,37 +2,33 @@
 <html>
 
 <head>
-  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <title>CosmetoLover</title>
   <link rel="icon" href="../images/logoCos.png">
 
-  <title>CosmetoLover</title>
-
-  <!-- slider stylesheet -->
+  <!-- Agrega el enlace al archivo CSS de Owl Carousel (slider stylesheet) -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  
 
-  <!-- bootstrap core css -->
+  <!-- Agrega el enlace al archivo CSS de Bootstrap -->
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
 
-  <!-- fonts style -->
+  <!-- Agrega el enlace a la fuente de Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
+
+  <!-- Agrega el enlace al archivo CSS de estilo personalizado -->
   <link href="../css/style.css" rel="stylesheet" />
+  
   <!-- responsive style -->
   <link href="../css/responsive.css" rel="stylesheet" />
-  <!-- Toastify -->
+  <!-- Agrega el enlace al archivo CSS de Toastify -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body class="sub_page">
-
+  
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section" >
@@ -66,12 +62,12 @@
                   <a class="nav-link" href="./contact.html">Contacto </a>
                 </li>
                 <li class="nav-item-login">
-                  <a class="navbar-brand" href="./login.html">
-                    <img src="../images/login1.ico" alt=""> </a>
+                  <a class="navbar-brand" href="./login.html" >
+                    <img id="icon-login" id="icon-login" src="../images/login1.ico" alt=""> </a>
                 </li>
                 <li class="nav-item-buy">
-                  <a class="navbar-brand" href="#">
-                      <img src="../images/buyicon.ico" alt="">
+                  <a class="navbar-brand" href="#" >
+                      <img id="icon-login" id="icon-login" src="../images/buyicon.ico" alt="">
                       <div class="count-products" id="count-products" style="display: none;">
                           <span id="contador-productos">0</span>
                       </div>
@@ -114,157 +110,129 @@
       </header>
     <!-- end header section -->
   </div>
-  <!-- service section -->
-  <section class="service_section layout_padding"  >
-
+  <section class="service_section layout_padding">
     <div class="container">
-
       <div class="heading_container">
-        <h2>
-          Productos
-        </h2>
-       <img src="../images/logoCos.png" alt="">
+        <h2>Productos</h2>
       </div>
 
-      <!-- sección filtro -->
-
-        <form class="form-row justify-content-center mt-4 mx-2">
-
-          <div class="form-group mr-2 col-md-4 col-lg-3">
-            <input type="text" class="form-control" id="filtroAvanzado" placeholder="¿Qué estás buscando?">
-          </div>
-
-          <div class="form-group mr-2 col-md-4 col-lg-3">
-            <select class="form-control" id="filtroProducto">
-              <option value="opcion1">Tipo de Producto</option>
-              <option value="opcion2">Agua Micelar</option>
-              <option value="opcion3">Protector Solar</option>
-              <option value="opcion3">Serum</option>
-              <option value="opcion3">Perfume Masculino</option>
-              <option value="opcion3">Perfume Femenino</option>
-              <option value="opcion3">Perfume Mix</option>
-            </select>
-          </div>
-
-          <div class="form-group mr-2 col-md-4 col-lg">
-            <select class="form-control" id="filtroMarca">
-              <option value="opcion1">Marca</option>
-              <option value="opcion2">Garnier</option>
-              <option value="opcion3">Dermaglos</option>
-              <option value="opcion3">By Dadatina</option>
-              <option value="opcion3">Natura</option>
-            </select>
-          </div>
-
-          <div class="form-group mr-2 col-md-4 col-lg">
-            <select class="form-control" id="filtroPrecio">
-              <option value="opcion1">Precio Máximo</option>
-              <option value="opcion2">Hasta $2.500</option>
-              <option value="opcion3">Hasta $5.000</option>
-              <option value="opcion3">Hasta $7.500</option>
-              <option value="opcion3">Hasta $10.000</option>
-            </select>
-          </div>
-
-          <div class="form-group mr-2 col-md-4 col-lg">
-            <button type="submit" class="form-control btn btn-primary pink">Filtrar</button>
-          </div>
-        </form>
-
-
-
-      <!-- fin sección filtro -->
-
-      <div class="service_container">
-        <div class="box">
-          <div class="marca-product" id="marca-item1"></div>
-            <div class="img-box" id="img1"></div>
-              <div class="detail-box" >
-                <h5 id="nombre-item1"></h5>
-                <p id="precio-item1"></p>
-                <div class="description-product" id="descripcion-item1"></div>
-                <br>
-                <button  class="seeProduct" id="see-product">Agregar al carrito</button>
-              </div>
-          
+      <!-- Formulario de filtro -->
+      <form class="form-row justify-content-center mt-4 mx-2">
+        <div class="form-group mr-2 col-md-4 col-lg-3">
+          <input type="text" class="form-control" id="filtroAvanzado" placeholder="¿Qué estás buscando?">
         </div>
 
+        <div class="form-group mr-2 col-md-4 col-lg-3">
+          <select class="form-control" id="filtroProducto">
+            <option value="opcion1">Tipo de producto</option>
+            <option value="Agua Micelar">Agua Micelar</option>
+            <option value="Protector Solar">Protector Solar</option>
+            <option value="Serum">Serum</option>
+            <option value="Perfume Masculino">Perfume Masculino</option>
+            <option value="Perfume Femenino">Perfume Femenino</option>
+            <option value="Perfume Mix">Perfume Mix</option>
+          </select>
+        </div>
+
+        <div class="form-group mr-2 col-md-4 col-lg">
+          <select class="form-control" id="filtroMarca">
+            <option value="opcion1">Marca</option>
+            <option  value="GARNIER">Garnier</option>
+            <option  value="DERMAGLOS">Dermaglos</option>
+            <option  value="By Dadatina">By Dadatina</option>
+            <option  value="NATURA">Natura</option>
+          </select>
+        </div>
+
+        <div class="form-group mr-2 col-md-4 col-lg">
+          <select class="form-control" id="filtroPrecio"  style="width: 170px;">
+            <option value="opcion1">Precio Máximo</option>
+            <option value="5000">$5000</option>
+            <option value="10000">$10000</option>
+            <option value="15000">$15000</option>
+            <option value="20000">$20000</option>
+          </select>
+        </div>
+
+        <div class="form-group mr-2 col-md-4 col-lg">
+          <button type="button" class="form-control" id="btn-filtro">Filtrar</button>
+        </div>
+      </form>
+
+      <div class="service_container">
+        <!-- Agrega tus productos con clases y atributos correspondientes -->
+        <!-- Ejemplo de producto -->
+        <div class="box">
+          <div class="marca-product" id="marca-item1"></div>
+          <div class="img-box" id="img1"></div>
+          <div class="detail-box">
+            <h5 id="nombre-item1"></h5>
+            <p id="precio-item1"></p>
+            <div class="description-product" id="descripcion-item1"></div>
+            <br>
+            <button class="seeProduct" id="see-product1">Agregar al carrito</button>
+          </div>
+        </div>
         <div class="box">
           <div class="marca-product" id="marca-item2"></div>
           <div class="img-box" id="img2"></div>
-          <div class="detail-box" >
+          <div class="detail-box">
             <h5 id="nombre-item2"></h5>
-            <p id="precio-item2"> </p>
-             <div class="description-product" id="descripcion-item2"></div>
-             <br>
-             <button  class="seeProduct" id="see-product2">Agregar al carrito</button>
+            <p id="precio-item2"></p>
+            <div class="description-product" id="descripcion-item2"></div>
+            <br>
+            <button class="seeProduct" id="see-product2">Agregar al carrito</button>
           </div>
-          
         </div>
         <div class="box">
           <div class="marca-product" id="marca-item3"></div>
           <div class="img-box" id="img3"></div>
-          <div class="detail-box" >
+          <div class="detail-box">
             <h5 id="nombre-item3"></h5>
             <p id="precio-item3"></p>
-             <div class="description-product" id="descripcion-item3"></div>
+            <div class="description-product" id="descripcion-item3"></div>
             <br>
-            <button  class="seeProduct" id="see-product3">Agregar al carrito</button>
+            <button class="seeProduct" id="see-product3">Agregar al carrito</button>
           </div>
-         
-              
-        
-          
         </div>
-        <div class="box ">
+        <div class="box">
           <div class="marca-product" id="marca-item4"></div>
           <div class="img-box" id="img4"></div>
-          <div class="detail-box" >
+          <div class="detail-box">
             <h5 id="nombre-item4"></h5>
             <p id="precio-item4"></p>
             <div class="description-product" id="descripcion-item4"></div>
             <br>
-            <button  class="seeProduct" id="see-product4">Agregar al carrito</button>
+            <button class="seeProduct" id="see-product4">Agregar al carrito</button>
           </div>
-          </div>
+        </div>
         <div class="box">
           <div class="marca-product" id="marca-item5"></div>
           <div class="img-box" id="img5"></div>
-          <div class="detail-box" >
+          <div class="detail-box">
             <h5 id="nombre-item5"></h5>
             <p id="precio-item5"></p>
-             <div class="description-product" id="descripcion-item5"></div>
+            <div class="description-product" id="descripcion-item5"></div>
             <br>
             <button class="seeProduct" id="see-product5">Agregar al carrito</button>
           </div>
-           
         </div>
-        <div class="box ">
+        <div class="box">
           <div class="marca-product" id="marca-item6"></div>
           <div class="img-box" id="img4"></div>
-          <div class="detail-box" >
+          <div class="detail-box">
             <h5 id="nombre-item6"></h5>
             <p id="precio-item6"></p>
             <div class="description-product" id="descripcion-item6"></div>
             <br>
-            <button  class="seeProduct" id="see-product6">Agregar al carrito</button>
+            <button class="seeProduct" id="see-product6">Agregar al carrito</button>
           </div>
-          </div>
-      </div>
-      <div class="btn-box">
-        <a href="#">
-           Ampliar
-        </a>
+        </div>
       </div>
     </div>
   </section>
-  <!-- end service section -->
 
-
-
-
-
-<!-- info section -->
+  <!-- info section -->
 
 <section class="info_section layout_padding">
   <div class="container">
