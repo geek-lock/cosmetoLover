@@ -14,8 +14,9 @@ function filtrarProductos() {
     const nombreDiv = producto.querySelector(".detail-box");
     const nombre = nombreDiv.querySelector("h5").textContent;
     const precio = parseFloat(nombreDiv.querySelector("p").textContent.replace("$", "").replace(",", ""));
+    const descripcionP = nombreDiv.querySelector(".description-product").textContent;
     const debeMostrar = (
-      (filtroAvanzado === "" || nombre.toLowerCase().includes(filtroAvanzado.toLowerCase())) &&
+      (filtroAvanzado === "" || nombre.toLowerCase().includes(filtroAvanzado.toLowerCase()) || descripcionP.toLowerCase().includes(filtroAvanzado.toLowerCase())) &&
       (filtroProducto === "opcion1" || filtroProducto === nombre) &&
       (filtroMarca === "opcion1" || filtroMarca === marca) &&
       (filtroPrecio === "opcion1" || (filtroPrecio === "5000" && precio <= 5000) ||
