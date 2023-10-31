@@ -10,7 +10,6 @@ const countProducts = document.querySelector('#contador-productos');
 const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
 const originalButtonColors = {};
-
 document.addEventListener('click', (e) => {
 	const targetElement = e.target;
   
@@ -155,11 +154,11 @@ const showHTML = () => {
 
 	let total = 0;
 	let totalOfProducts = 0;
-
+	
 	carrito.forEach(product => {
 		const containerProduct = document.createElement('div');
 		containerProduct.classList.add('cart-product');
-
+		
 		containerProduct.innerHTML = `
 			<div class="info-cart-product">
 				<span class="cantidad-producto-carrito">${product.quantity}</span>
@@ -169,8 +168,8 @@ const showHTML = () => {
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
-				viewBox="0 0 24 24"
-				stroke-width="1.5"
+				viewBox="0 5 24 24"
+				stroke-width="2.5"
 				stroke="currentColor"
 				class="icon-close"
 			>
@@ -181,18 +180,19 @@ const showHTML = () => {
 				/>
 			</svg>
 		`;
-
+		
 		rowProduct.append(containerProduct);
-
 		total = total + parseInt(product.quantity * product.price.slice(1));
 		totalOfProducts = totalOfProducts + product.quantity;
+		
 	});
-
+	
+	
 	valorTotal.innerText = `$${total}`;
 	countProducts.innerText = totalOfProducts;
 	showCountProduct();
 	updateButtonColors();
-};
+	};
 
 // Llama a mostrarHTML al cargar la página
 document.addEventListener('DOMContentLoaded', showHTML);
@@ -206,6 +206,42 @@ function actualizarEstadoBotones() {
         const isInCart = carrito.some(product => product.title === buttonTitle);
         btn.style.backgroundColor = isInCart ? 'gray' : originalButtonColors[btn.id];
     });
+}
+// Función para agregar y quitar productos del carrito en la tabla
+function toggleProductInCart(productTitle) {
+    const tableBody = document.querySelector('.table-group-divider');
+    const existingRow = [...tableBody.children].find(row => row.dataset.title === productTitle);
+    
+    if (existingRow) {
+        existingRow.remove();
+        eliminarDelCarrito(productTitle);
+    } else {
+        const product = carrito.find(product => product.title === productTitle);
+        const newRow = document.createElement('tr');
+        newRow.dataset.title = product.title;
+        newRow.innerHTML = `
+            <th scope="row"></th>
+            <td>${product.title}</td>
+            <td>${product.quantity}</td>
+            <td>$${(product.quantity * parseInt(product.price.slice(1))).toFixed(2)}</td>
+        `;
+        tableBody.appendChild(newRow);
+    }
+}
+
+// Modifica la función agregarAlCarrito para que llame a la nueva función
+function agregarAlCarrito(infoProducto) {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    
+    const existe = carrito.find(producto => producto.title === infoProducto.title);
+    if (existe) {
+        existe.quantity++;
+    } else {
+        carrito.push(infoProducto);
+    }
+    
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    toggleProductInCart(infoProducto.title); // Agregar esta línea
 }
 
 // Agrega un evento que se ejecuta cuando el carrito se actualiza
