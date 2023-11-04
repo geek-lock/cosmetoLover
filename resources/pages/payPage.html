@@ -118,8 +118,9 @@
 
     <section class="pay_section">
       <div class="table-container">
+        <h1>Carrito de Compras <img src="../images/buyicon.ico" style="height: 50px;" alt=""></h1>
       <table class="table">
-        <thead>
+        <thead class="thead-pay">
           <tr>
             <th scope="col">#</th>
             <th scope="col">Nombre del producto</th>
@@ -127,8 +128,8 @@
             <th scope="col">Total</th>
           </tr>
         </thead>
-        <tbody class="table-group-divider">
-          <tr class="product-list-pay hidden">
+        <tbody class="table-group-divider" >
+          <tr class="product-list-pay" id="car-clear">
             <th scope="row"></th>
             <td>Sin productos!</td>
           </tr>
@@ -233,7 +234,7 @@
 <script src="../js/bootstrap.js"></script>
 <script src="../js/script.js"></script>
 <script src="../js/datos.js"></script>
-<script src="../js/app.js"></script>
+<script src="../js/payData.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 </body>

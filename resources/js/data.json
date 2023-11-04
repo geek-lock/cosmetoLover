@@ -3,36 +3,42 @@
     "marca": "GARNIER",
     "nombre": "Agua Micelar",
     "descripcion": "El agua micelar bifásica desmaquilla, limpia y nutre en un solo paso rostro, ojos y labios.",
-    "precio": 5000
+    "precio": 5000,
+    "foto": "../images/agua-micelar.png"
     },
     {
     "marca": "DERMAGLOS",
     "nombre": "Protector Solar",
     "descripcion": "Protector solar Dermaglós FPS 20 en emulsión de 250 mL.",
-    "precio": 4780
+    "precio": 4780,
+    "foto": "../images/agua-micelar.png"
     },
     {
     "marca": "By Dadatina",
     "nombre": "Serum Reparador",
     "descripcion": "Serum Reparador Vol2 Regenerador Refill 30ml Tipo De Piel Todo Tipo De Piel.",
-    "precio": 6320
+    "precio": 6320,
+    "foto": "../images/agua-micelar.png"
     },
     {
     "marca": "NATURA",
     "nombre": "Perfume Femenino",
     "descripcion": "Kaiak Vital femenino te transporta a un encuentro energizante con el mar.",
-    "precio": 8050
+    "precio": 8050,
+    "foto": "../images/agua-micelar.png"
     },
     {
     "marca": "NATURA",
     "nombre": "Perfume Masculino",
     "descripcion": "Mix provocante de notas amaderadas, bergamota y pimienta.",
-    "precio": 8050
+    "precio": 8050,
+    "foto": "../images/agua-micelar.png"
     },
     {
     "marca": "NATURA",
     "nombre": "Perfume Mix",
     "descripcion": "Mix provocante de notas amaderadas, bergamota y pimienta.",
-    "precio": 8000
+    "precio": 8000,
+    "foto": "../images/agua-micelar.png"
     }
 ]
