@@ -6,7 +6,10 @@ body {
   color: #0c0c0c;
  /* background-color: #ffffff;*/
 }
-
+.redireccion{
+ font-size: 30px;
+ font-weight: bold;
+}
 .layout_padding {
   padding-top: 90px;
   padding-bottom: 90px;
