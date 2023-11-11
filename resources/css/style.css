@@ -1049,6 +1049,8 @@ border-radius: 20px;
   z-index: 1000;
 }
 
+
+
 .popup.active {
   display: block;
 }
