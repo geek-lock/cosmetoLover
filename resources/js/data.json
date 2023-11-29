@@ -4,7 +4,7 @@
     "nombre": "Agua Micelar",
     "descripcion": "El agua micelar bifásica desmaquilla, limpia y nutre en un solo paso rostro, ojos y labios.",
     "precio": 5000,
-    "foto": "../images/agua-micelar.png"
+    "foto": "<img src='../images/agua-micelar.png' style='height: 150px;' alt=''>"
     },
     {
     "marca": "DERMAGLOS",
