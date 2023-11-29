@@ -1,3 +1,4 @@
+//Controlador de Boton Filtro
 document.addEventListener("DOMContentLoaded", function() {
   // Función para filtrar productos
 function filtrarProductos() {
@@ -36,32 +37,37 @@ btnFiltro.addEventListener("click", filtrarProductos);
 
   
 
-  // Carga los datos iniciales (asegúrate de que esta función coincida con tu estructura de datos)
+  
   async function cargarDatos() {
-    // Carga tus datos y genera elementos HTML
-    // Asegúrate de que los productos se creen con las clases y atributos necesarios
+    // Carga datos y genera elementos HTML|
     const response = await fetch('../js/data.json');
     const dataDecoded = await response.json();
 
-    for (let i = 0; i < dataDecoded.length; i++) {
+    for (let i = 0; i <= dataDecoded.length; i++) {
       const dato = dataDecoded[i];
 
       const marcaElement = document.getElementById(`marca-item${i+1}`);
       const nombreElement = document.getElementById(`nombre-item${i+1}`);
       const precioElement = document.getElementById(`precio-item${i+1}`);
       const descripcionElement = document.getElementById(`descripcion-item${i+1}`);
+      const fotoElement = document.getElementById(`img${i+1}`);
+      
 
-      if (marcaElement && nombreElement && precioElement && descripcionElement) {
+      if (marcaElement && nombreElement && precioElement && descripcionElement && fotoElement ) {
         marcaElement.textContent = dato.marca;
         nombreElement.textContent = dato.nombre;
         precioElement.textContent = `$${dato.precio}`;
         descripcionElement.textContent = dato.descripcion;
+        fotoElement.style.background ='url(' + dato.foto + ')' ;
+        fotoElement.style.backgroundSize = '100% 100%';
+        fotoExport = dato.foto;
+        
       }
+      
     }
   }
-
-  // Llama a la función de carga de datos al cargar la página
+  
   cargarDatos();
-
+  
 
 });

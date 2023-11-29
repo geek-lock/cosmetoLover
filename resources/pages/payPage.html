@@ -30,7 +30,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
-<body class="sub_page">
+
 
   <div class="hero_area">
     <!-- header section strats -->
@@ -70,7 +70,40 @@
                 </li>
                 <li class="nav-item-buy">
                   <a class="navbar-brand" href="#">
-                    <img id="icon-login" src="../images/buyicon.ico" alt=""> </a>
+                    <img id="icon-login" src="../images/buyicon.ico" alt="">
+                    <div class="count-products" id="count-products" style="display: none;">
+                        <span id="contador-productos">0</span>
+                    </div>
+                  </a>
+                  <div class="container-cart-products hidden-cart">
+                    <div class="row-product hidden">
+                      <div class="cart-product">
+                        <div class="info-cart-product">
+                          <span class="cantidad-producto-carrito">0</span>
+                          <p class="titulo-producto-carrito">Productos</p>
+                          <span class="precio-producto-carrito">$0</span>
+                        </div>
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="icon-close">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="cart-total hidden">
+                      <h3>Total:</h3>
+                      <span class="total-pagar">$0</span>
+                      <a href="payPage.html">Ir a pagar</a>
+                    </div>
+                    <p class="cart-empty">El carrito está vacío</p>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -81,44 +114,34 @@
     <!-- end header section -->
   </div>
 
+  <body class="sub_page">
 
-
-  <!-- about section -->
-  <section class="about_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                ¡Próximamente!
-              </h2>
-              <img src="./images/logoCos.png" alt="">
-            </div>
-            
-            
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="img_container">
-            <div class="img-box b1">
-              <img src="../images/portada4.png" alt="" />
-            </div>
-            <div class="img-box b2">
-              <img src="../images/portada3.png" alt="" />
-            </div>
-          </div>
-
-        </div>
-
+    <section class="pay_section">
+      <div class="table-container">
+        <h2 style="font-weight: bold;">Carrito de Compras <img src="../images/buyicon.ico" style="height: 50px;" alt=""></h2>
+      <table class="table">
+        <thead class="thead-pay">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre del producto</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider" >
+          <tr class="product-list-pay" id="car-clear">
+            <th scope="row"></th>
+            <td>Sin productos!</td>
+          </tr>
+        </tbody>
+      </table>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- end about section -->
+
 
 <!-- info section -->
-
+<div class="service_container"></div>
 <section class="info_section layout_padding">
   <div class="container">
     <div class="info_contact">
@@ -210,6 +233,9 @@
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/bootstrap.js"></script>
 <script src="../js/script.js"></script>
+<script src="../js/datos.js"></script>
+<script src="../js/payData.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 </body>
 
