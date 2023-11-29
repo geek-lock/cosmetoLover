@@ -1,3 +1,4 @@
+//Controlador de Boton Filtro
 document.addEventListener("DOMContentLoaded", function() {
   // Función para filtrar productos
 function filtrarProductos() {
@@ -38,8 +39,7 @@ btnFiltro.addEventListener("click", filtrarProductos);
 
   
   async function cargarDatos() {
-    // Carga datos y genera elementos HTML
-
+    // Carga datos y genera elementos HTML|
     const response = await fetch('../js/data.json');
     const dataDecoded = await response.json();
 
@@ -50,21 +50,24 @@ btnFiltro.addEventListener("click", filtrarProductos);
       const nombreElement = document.getElementById(`nombre-item${i+1}`);
       const precioElement = document.getElementById(`precio-item${i+1}`);
       const descripcionElement = document.getElementById(`descripcion-item${i+1}`);
+      const fotoElement = document.getElementById(`img${i+1}`);
       
 
-      if (marcaElement && nombreElement && precioElement && descripcionElement ) {
+      if (marcaElement && nombreElement && precioElement && descripcionElement && fotoElement ) {
         marcaElement.textContent = dato.marca;
         nombreElement.textContent = dato.nombre;
         precioElement.textContent = `$${dato.precio}`;
         descripcionElement.textContent = dato.descripcion;
-       
+        fotoElement.style.background ='url(' + dato.foto + ')' ;
+        fotoElement.style.backgroundSize = '100% 100%';
+        fotoExport = dato.foto;
         
       }
       
     }
   }
-
+  
   cargarDatos();
-
+  
 
 });

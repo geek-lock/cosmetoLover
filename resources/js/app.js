@@ -1,4 +1,4 @@
-
+//Controlador de carrito
 const btnCart = document.querySelector('.nav-item-buy');
 const containerCartProducts = document.querySelector('.container-cart-products');
 const btnProduct = document.querySelectorAll('.seeProduct');
@@ -38,10 +38,12 @@ btnProduct.forEach(btn => {
         }).showToast();
 
         const product = btn.parentElement;
+        console.log('en el product: ',product);
         const infoProduct = {
             quantity: 1,
             title: product.querySelector('h5').textContent,
             price: product.querySelector('p').textContent,
+            divFoto: product.querySelector('.img-box'),
         };
         agregarAlCarrito(infoProduct);
 		
@@ -51,7 +53,7 @@ btnProduct.forEach(btn => {
 function agregarAlCarrito(infoProduct) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     
-	console.log(carrito);
+	
     const existe = carrito.find(producto => producto.title === infoProduct.title);
     if (existe) {
         existe.quantity++;
@@ -94,10 +96,13 @@ function showCountProduct(){
 productsList.addEventListener('click', e => {
     if (e.target.classList.contains('seeProduct')) {
         const product = e.target.parentElement;
+        
         const infoProduct = {
             quantity: 1,
             title: product.querySelector('h5').textContent,
             price: product.querySelector('p').textContent,
+            
+            
         };
         
         const exits = carrito.some(
