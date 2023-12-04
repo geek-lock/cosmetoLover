@@ -170,7 +170,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-toggler {
-  padding: 0;
+  padding: 0 0 0 90%;
   width: 37px;
   height: 42px;
 }
@@ -266,8 +266,8 @@ body{
 .slider_section .detail_box a:hover {
   background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
   color: black;/* Cambia el color del texto en el estado de hover */
-  transform: scale(1.25); /* Escala el botón al 110% en el estado de hover */
-  font-size: 20px; /* Aumenta el tamaño de fuente en el estado de hover */
+  transform: scale(1.1); /* Escala el botón al 110% en el estado de hover */
+  font-size: 15px; /* Aumenta el tamaño de fuente en el estado de hover */
 }
 
 .slider_section .img_container {
@@ -365,10 +365,16 @@ body{
   border: 1px solid #999;
   width:300px;
   height:300px;
-  
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
 }
-
-
+.img-box-product{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block; 
+}
+/*
 #img1{
   background:url("../images/agua-micelar.png" );
   background-size: 100% 100%;
@@ -393,11 +399,12 @@ body{
   background:url("../images/perfume-natura1.jpg" );
   background-size: 100% 100%;
   background-repeat:no-repeat;
-}
+}*/
 .img-box-index img{
   width: 100%; /* Hace que la imagen ocupe todo el ancho del div */
   height: 100%; /* Mantiene la proporción de aspecto original de la imagen */
   display: block; 
+  
 }
 
 .description-product #boton-micelar{
@@ -445,8 +452,8 @@ body{
 .service_section .btn-box a:hover {
   background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
   color: black;/* Cambia el color del texto en el estado de hover */
-  transform: scale(1.25); /* Escala el botón al 125% en el estado de hover */
-  font-size: 20px; /* Aumenta el tamaño de fuente en el estado de hover */
+  transform: scale(1.1); /* Escala el botón al 110% en el estado de hover */
+  font-size: 15px; /* Aumenta el tamaño de fuente en el estado de hover */
 }
 
 .about_section {
@@ -608,8 +615,8 @@ body{
 .contact_section button:hover {
   background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
   color: black;/* Cambia el color del texto en el estado de hover */
-  transform: scale(1.25); /* Escala el botón al 110% en el estado de hover */
-  font-size: 20px; /* Aumenta el tamaño de fuente en el estado de hover */
+  transform: scale(1.1); /* Escala el botón al 110% en el estado de hover */
+  font-size: 15px; /* Aumenta el tamaño de fuente en el estado de hover */
 }
 
 .contact_section .map_container {
@@ -731,7 +738,7 @@ body{
   background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
   color: black;/* Cambia el color del texto en el estado de hover */
   transform: scale(1.1); /* Escala el botón al 110% en el estado de hover */
-  font-size: 20px; /* Aumenta el tamaño de fuente en el estado de hover */
+  font-size: 15px; /* Aumenta el tamaño de fuente en el estado de hover */
 }
 
 .info_section .box {
@@ -815,11 +822,11 @@ body{
 
   background-color: rgb(255, 114, 114);
   color: #fff;
-  width: 19px;
-  height: 19px;
+  width: 68px;
+  height: 20px;
 
   display: flex;
-  justify-content: center;
+  justify-content: center ;
   align-items: center;
   border-radius: 50%;
 }
@@ -831,13 +838,15 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding: 10px;
   gap: 20px;
 }
 
 .cart-total h3{
   font-size: 20px;
   font-weight: 700;
+  margin-bottom: 0px;
+
 }
 
 .total-pagar{
@@ -847,18 +856,23 @@ body{
 .info-cart-product{
   display: flex;
   justify-content: space-between;
-  flex: 0.8;
+ flex: 0.9;
+
+}
+.info-cart-product p{
+  padding-left: 50px;
 }
 
 .titulo-producto-carrito{
   font-size: 20px;
-  padding: 2px 20px 2px 20px;
+  
 }
 
 .precio-producto-carrito{
   font-weight: 700;
   font-size: 20px;
   margin-left: 10px;
+  padding-top: 5px;
 }
 
 .cantidad-producto-carrito{
@@ -869,8 +883,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
-
+  padding: 50px;
+  height: 70px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 
 }
@@ -900,7 +914,7 @@ body{
   text-align: center;
 }
 .hidden-cart{
-  display: none;
+ display: none;
 }
 .hidden{
   display: none;
@@ -1000,8 +1014,8 @@ border-radius: 20px;
 .register_section button:hover {
   background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
   color: black;/* Cambia el color del texto en el estado de hover */
-  transform: scale(1.25); /* Escala el botón al 110% en el estado de hover */
-  font-size: 20px; /* Aumenta el tamaño de fuente en el estado de hover */
+  transform: scale(1.1); /* Escala el botón al 110% en el estado de hover */
+  font-size: 15px; /* Aumenta el tamaño de fuente en el estado de hover */
 }
 
 .register_section .map_container {
@@ -1049,6 +1063,47 @@ border-radius: 20px;
   z-index: 1000;
 }
 
+
+
 .popup.active {
   display: block;
+}
+#btn-filtro{
+  background-color:  rgb(255, 114, 114); 
+  border-radius: 15px;
+}
+#btn-filtro:hover{
+  background-color:  rgb(230, 133, 133);
+  font-style: italic;
+  border-radius: 15px;
+}
+#icon-login{
+  margin-left: 47%;
+
+}
+/*PAY PAGE*/
+.pay_section{
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  text-align: center;
+  padding-top: 20px;
+}
+.resumen table{
+  margin-top: 2rem;
+  -webkit-box-shadow: -4px 2px 38px -15px rgba(5,3,3,1);
+-moz-box-shadow: -4px 2px 38px -15px rgba(5,3,3,1);
+box-shadow: -4px 2px 38px -15px rgba(5,3,3,1);
+  width: 100%;
+  text-align: left;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+.resumen table td{
+  text-align: right;
+}
+
+.resumen table .line-bottom{
+  border-bottom: 2px solid var(--primary-solid);
 }

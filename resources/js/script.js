@@ -1,3 +1,4 @@
+//Controlador de Formularios
 document.getElementById("miFormulario2").addEventListener("submit", function (event) {
 
   let email = document.getElementById("emailInput").value;
