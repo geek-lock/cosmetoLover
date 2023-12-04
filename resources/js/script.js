@@ -1,9 +1,5 @@
-//Controlador de Formularios
 document.getElementById("miFormulario2").addEventListener("submit", function (event) {
-
   let email = document.getElementById("emailInput").value;
-
-
   if (!isValidEmail(email)) {
     event.preventDefault();
     alert("Ingrese una dirección de correo electrónico válida.");
@@ -42,16 +38,11 @@ function isValidPhoneNumber(telefono) {
   return numeroTelefono.test(telefono);
 };
 
-//productos-carrito
 document.getElementById("see-product").addEventListener("click", function (event) {
   event.preventDefault();
-
-  // Obtener los datos del producto
   const nombre = document.getElementById("nombre-item1").textContent;
   const descripcion = document.getElementById("descripcion-item1").textContent;
   const precio = parseFloat(document.getElementById("precio-item1").textContent);
-
-  // Llamar a la función agregarProducto
   agregarProducto(nombre, descripcion, precio);
 });
 function agregarProducto(nombre, descripcion, precio) {
@@ -59,20 +50,13 @@ function agregarProducto(nombre, descripcion, precio) {
   actualizarCarrito();
 }
 
-
-
-
-
-//agrego para validar el registro de usuario, la contraseña sea igual a la confirmacion de contraseña
-
 document.getElementById("miRegistro").addEventListener("submit", function(event) {
   var password = document.getElementById("Password-cliente").value;
   var confirmarPassword = document.getElementById("Confirmar-Password").value;
 
   if (password !== confirmarPassword) {
-    // Contraseñas no coinciden, muestra un mensaje de error
     document.getElementById("mensajeError").style.display = "block";
-    event.preventDefault(); // Evita el envío del formulario
+    event.preventDefault();
   }
 });
 

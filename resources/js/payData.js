@@ -2,14 +2,10 @@ let carrito = JSON.parse(localStorage.getItem('carrito'));
 let cart = carrito.length;
 let tituloProducto = 0;
 
-
-
-
 for(let i = 0; i< carrito.length;i++){
     tituloProducto = carrito[i].title;
     toggleProductInCart(tituloProducto);
 }
-
 
 function toggleProductInCart(productTitle) {
     const tableBody = document.querySelector('.table-group-divider');

@@ -1,7 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
   color: #0c0c0c;
- /* background-color: #ffffff;*/
 }
 
 .layout_padding {
@@ -53,7 +52,6 @@ body {
   width: 30px;
 }
 
-/*header section*/
 .hero_area {
   height: 98vh;
   position: relative;
@@ -215,8 +213,7 @@ a:focus {
 body{
   background-color: #e4d2c3;
 }
-/*end header section*/
-/* slider section */
+
 .slider_section {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -264,10 +261,10 @@ body{
 }
 
 .slider_section .detail_box a:hover {
-  background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
-  color: black;/* Cambia el color del texto en el estado de hover */
-  transform: scale(1.1); /* Escala el botón al 110% en el estado de hover */
-  font-size: 15px; /* Aumenta el tamaño de fuente en el estado de hover */
+  background-color: rgb(255, 114, 114);
+  color: black;
+  transform: scale(1.1);
+  font-size: 15px;
 }
 
 .slider_section .img_container {
@@ -374,37 +371,11 @@ body{
   height: 100%;
   display: block; 
 }
-/*
-#img1{
-  background:url("../images/agua-micelar.png" );
-  background-size: 100% 100%;
-  background-repeat:no-repeat;
-}
-#img2{
-  background:url("../images/protector-solar.png" );
-  background-size: 100% 100%;
-  background-repeat:no-repeat;
-}
-#img3{
-  background:url("../images/serum.png" );
-  background-size: 100% 100%;
-  background-repeat:no-repeat;
-}
-#img4{
-  background:url("../images/perfume-natura.jpg" );
-  background-size: 100% 100%;
-  background-repeat:no-repeat;
-}
-#img5{
-  background:url("../images/perfume-natura1.jpg" );
-  background-size: 100% 100%;
-  background-repeat:no-repeat;
-}*/
+
 .img-box-index img{
-  width: 100%; /* Hace que la imagen ocupe todo el ancho del div */
-  height: 100%; /* Mantiene la proporción de aspecto original de la imagen */
-  display: block; 
-  
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .description-product #boton-micelar{
@@ -446,14 +417,13 @@ body{
 .service_section .box .img-box img{
   width: 100%;
   height: 100%;
-   
 }
 
 .service_section .btn-box a:hover {
-  background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
-  color: black;/* Cambia el color del texto en el estado de hover */
-  transform: scale(1.1); /* Escala el botón al 110% en el estado de hover */
-  font-size: 15px; /* Aumenta el tamaño de fuente en el estado de hover */
+  background-color: rgb(255, 114, 114);
+  color: black;
+  transform: scale(1.1);
+  font-size: 15px;
 }
 
 .about_section {
@@ -494,11 +464,9 @@ body{
 }
 
 .about_section .img_container .img-box img {
-
-    width: 100%; /* Hace que la imagen ocupe todo el ancho del div */
+    width: 100%;
     height: 100%;
     display: block; 
-  
 }
 
 .about_section .detail-box {
@@ -613,10 +581,10 @@ body{
 }
 
 .contact_section button:hover {
-  background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
-  color: black;/* Cambia el color del texto en el estado de hover */
-  transform: scale(1.1); /* Escala el botón al 110% en el estado de hover */
-  font-size: 15px; /* Aumenta el tamaño de fuente en el estado de hover */
+  background-color: rgb(255, 114, 114);
+  color: black;
+  transform: scale(1.1);
+  font-size: 15px;
 }
 
 .contact_section .map_container {
@@ -634,7 +602,6 @@ body{
   background-position: top;
 }
 
-/* info section */
 .info_section {
   background-color:  #dbb8b8;
   color: #ffffff;
@@ -735,10 +702,10 @@ body{
 }
 
 .info_section .info_form form button:hover {
-  background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
-  color: black;/* Cambia el color del texto en el estado de hover */
-  transform: scale(1.1); /* Escala el botón al 110% en el estado de hover */
-  font-size: 15px; /* Aumenta el tamaño de fuente en el estado de hover */
+  background-color: rgb(255, 114, 114);
+  color: black;
+  transform: scale(1.1);
+  font-size: 15px;
 }
 
 .info_section .box {
@@ -758,8 +725,6 @@ body{
   margin-right: 8px;
 }
 
-/* end info section */
-/* footer section*/
 .footer_section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -780,9 +745,7 @@ body{
 .footer_section p a {
   color: #222222;
 }
-/*# sourceMappingURL=style.css.map */
 
-/*BOTON VER-COMPRAR*/
 .seeProduct{
   border-radius: 20px;
   padding: 7px 25px;
@@ -803,11 +766,11 @@ body{
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
-  display: none; /* Inicialmente oculto */
+  display: none;
 }
 
 .carrito-container.visible {
-  display: block; /* Mostrar cuando tiene la clase visible */
+  display: block;
 }
 
 .description-product{
@@ -865,7 +828,6 @@ body{
 
 .titulo-producto-carrito{
   font-size: 20px;
-  
 }
 
 .precio-producto-carrito{
@@ -892,19 +854,16 @@ body{
   position: absolute;
   top: 50px;
   right: 0;
-
   background-color: #fff;
   width: 400px;
   z-index: 1;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
   border-radius: 10px;
-  
 }
 .icon-close{
   width: 25px;
   height: 100px;
 }
-
 .icon-close:hover{
   stroke: red;
   cursor: pointer;
@@ -923,15 +882,10 @@ body{
 background-color:rgb(255, 114, 114);
 margin-right: 180px;
 border-radius: 20px;
-
 }
-
 
 #link:active{
   color: none;
-  
-
-
 }
 #link-service:link {
   color: #000; 
@@ -940,7 +894,6 @@ border-radius: 20px;
 #link-service:visited {
   color: #000; 
   text-decoration: none; /
-  
 }
 #filterbar{
   border-right: #000 solid 1px;
@@ -949,7 +902,6 @@ border-radius: 20px;
   padding-left: 0%;
 }
 
-
 .formulario {
     background-color: white;
 }
@@ -957,7 +909,6 @@ border-radius: 20px;
   margin-top: 45px;
   padding-right: 35px;
 }
-/*parte de register seccion*/
 
 .register_section {
   position: relative;
@@ -965,8 +916,6 @@ border-radius: 20px;
   padding-right: 35px;
   box-shadow: 0px 0px 2px rgba(0,0,0,.6);
 }
-
-
 
 .register_section input {
   width: 100%;
@@ -1012,10 +961,10 @@ border-radius: 20px;
 }
 
 .register_section button:hover {
-  background-color: rgb(255, 114, 114);/* Cambia el color de fondo en el estado de hover */
-  color: black;/* Cambia el color del texto en el estado de hover */
-  transform: scale(1.1); /* Escala el botón al 110% en el estado de hover */
-  font-size: 15px; /* Aumenta el tamaño de fuente en el estado de hover */
+  background-color: rgb(255, 114, 114);
+  color: black;
+  transform: scale(1.1);
+  font-size: 15px;
 }
 
 .register_section .map_container {
@@ -1049,8 +998,7 @@ border-radius: 20px;
   }
 
   }
-/*carrito de compras*/
-/* Añade esto en tu CSS */
+
 .popup {
   display: none;
   position: fixed;
@@ -1062,8 +1010,6 @@ border-radius: 20px;
   border: 2px solid #000;
   z-index: 1000;
 }
-
-
 
 .popup.active {
   display: block;
@@ -1081,7 +1027,7 @@ border-radius: 20px;
   margin-left: 47%;
 
 }
-/*PAY PAGE*/
+
 .pay_section{
   justify-content: center;
   align-items: center;

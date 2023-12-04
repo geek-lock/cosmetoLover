@@ -73,7 +73,6 @@ body {
   }
 }
 
-/*header section*/
 .hero_area {
   height: 98vh;
   position: relative;
@@ -86,8 +85,6 @@ body {
   .hero_area {
     height: auto;
   }
-
-
 }
 
 .header_section {
@@ -141,8 +138,6 @@ a:focus {
   box-shadow: none;
 }
 
-
-
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -164,7 +159,7 @@ a:focus {
 }
 
 .navbar-expand-lg .navbar-collapse {
-  align-items: flex-end; //for this site only
+  align-items: flex-end;
 }
 
 .custom_nav-container .navbar-toggler {
@@ -215,11 +210,6 @@ a:focus {
 
 }
 
-
-
-/*end header section*/
-
-/* slider section */
 .slider_section {
   flex: 1;
   display: flex;
@@ -232,8 +222,6 @@ a:focus {
   .row {
     align-items: center;
   }
-
-
 
   .detail_box {
     color: $black;
@@ -304,10 +292,6 @@ a:focus {
   }
 }
 
-// end slider section
-
-// service section
-
 .service_section {
   text-align: center;
 
@@ -373,11 +357,6 @@ a:focus {
   }
 }
 
-// end service section
-
-
-
-// about section
 .about_section {
   background-color: #f3f0f6;
 
@@ -425,11 +404,6 @@ a:focus {
   }
 }
 
-// end about section
-
-
-
-// products section
 .products_section {
 
   .heading_container {
@@ -466,12 +440,8 @@ a:focus {
   }
 }
 
-// end products section
-
-// contact section
 .contact_section {
   position: relative;
-
 
   form {
     margin-top: 45px;
@@ -513,22 +483,15 @@ a:focus {
     min-height: 325px;
 
     .map-responsive {
-      margin: 20px 0px 0px 0px; /* Agregamos 20px de margen solo en la parte superior */
+      margin: 20px 0px 0px 0px;
       height: 100%;
     }
   }
 }
 .col-md-6{
-  margin: 100px 0px 0px 0px; /* Agregamos 20px de margen solo en la parte superior */
+  margin: 100px 0px 0px 0px;
 }
 
-// end contact section
-
-
-
-
-
-/* info section */
 .info_section {
   background-color: #190734;
   color: $white;
@@ -536,7 +499,6 @@ a:focus {
   h6 {
     font-weight: bold;
   }
-
 
   .info_contact {
     margin-top: 60px;
@@ -610,10 +572,6 @@ a:focus {
   }
 }
 
-/* end info section */
-
-/* footer section*/
-
 .footer_section {
   display: flex;
   justify-content: center;
@@ -631,10 +589,6 @@ a:focus {
   }
 }
 
-
-// end footer section
-
-// register section
 .register_section {
   position: relative;
 
@@ -702,5 +656,3 @@ a:focus {
     }
   }
 }
-
-// end register section

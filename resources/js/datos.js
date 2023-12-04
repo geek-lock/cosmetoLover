@@ -1,13 +1,12 @@
-//Controlador de Boton Filtro
+
 document.addEventListener("DOMContentLoaded", function() {
-  // Función para filtrar productos
+
 function filtrarProductos() {
   const filtroAvanzado = document.getElementById("filtroAvanzado").value;
   const filtroProducto = document.getElementById("filtroProducto").value;
   const filtroMarca = document.getElementById("filtroMarca").value;
   const filtroPrecio = document.getElementById("filtroPrecio").value;
 
-  // Realiza el filtrado de productos según los valores seleccionados en el formulario
   const productos = document.querySelectorAll(".box");
 
   productos.forEach(producto => {
@@ -30,7 +29,7 @@ function filtrarProductos() {
     producto.style.display = debeMostrar ? "block" : "none";
   });
   }
-// Agrega un controlador de eventos al botón de filtro
+
 const btnFiltro = document.getElementById("btn-filtro");
 btnFiltro.addEventListener("click", filtrarProductos);
   
